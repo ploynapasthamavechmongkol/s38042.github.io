@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Statement of Purpose - พลอยนภัส ธรรมเวชมงคล</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Prompt', sans-serif; }
+        body {
+            background-color: #fdfbf7;
+            color: #4a403a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(232, 195, 173, 0.15);
+            z-index: -1;
+            animation: float 10s ease-in-out infinite alternate;
+        }
+        .shape1 { width: 250px; height: 250px; top: 5%; left: 5%; }
+        .shape2 { width: 350px; height: 350px; bottom: 5%; right: 5%; animation-duration: 14s; background: rgba(181, 198, 184, 0.15); }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        .main-wrapper {
+            width: 100%;
+            max-width: 900px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(74, 64, 58, 0.06);
+            padding: 40px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out;
+            border: 1px solid #f2ece4;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1.page-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #3b302a;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        h1.page-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #e8c3ad;
+            border-radius: 2px;
+        }
+
+        /* Navigation Bar inside content */
+        .nav-container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+        .nav-btn {
+            background-color: #fff;
+            color: #5c5048;
+            border: 1px solid #e2dad0;
+            padding: 8px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+        .nav-btn:hover, .nav-btn.active {
+            background-color: #e8c3ad;
+            color: #fff;
+            border-color: #e8c3ad;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(232, 195, 173, 0.4);
+        }
+
+        /* Common content styles */
+        p, li {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #5c5048;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        /* Card styles */
+        .card {
+            background: #faf7f2;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid #f0e9df;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media(max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .img-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .img-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+        }
+        .img-box img:hover {
+            transform: scale(1.02);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #e8c3ad;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn ">หน้าแรก</a>
+<a href="profile.html" class="nav-btn ">ประวัติส่วนตัว</a>
+<a href="education.html" class="nav-btn ">ประวัติการศึกษา</a>
+<a href="sop.html" class="nav-btn active">Statement of Purpose</a>
+<a href="innovation.html" class="nav-btn ">โครงงานนวัตกรรม</a>
+<a href="activities.html" class="nav-btn ">กิจกรรมคณะ</a>
+<a href="volunteer.html" class="nav-btn ">จิตอาสา</a>
+<a href="leadership.html" class="nav-btn ">ความเป็นผู้นำ</a>
+<a href="certificate.html" class="nav-btn ">ใบประกาศนียบัตร</a>
+<a href="contact.html" class="nav-btn ">ช่องทางติดต่อ</a>
+
+    </div>
+
+    <div class="main-wrapper">
+        <h1 class="page-title">Statement of Purpose</h1>
+        
+<div class="card" style="text-align: center;">
+    <div class="img-box" style="margin-top: 0; margin-bottom: 20px;">
+        <img src="Logo_ku_th.png" alt="Logo Kasetsart University" style="max-height: 120px; width: auto;" onerror="this.src='https://via.placeholder.com/150?text=KU+Logo'">
+    </div>
+    <span class="badge">Statement of Purpose</span>
+</div>
+
+<div class="card" style="line-height: 1.9;">
+    <p style="text-indent: 2em; margin-bottom: 20px;">
+        สวัสดีค่ะดิฉันชื่อนางสาว พลอยนภัส ธรรมเวชมงคล เริ่มจากดิฉันเติบโตมาในครอบครัวที่ทำธุรกิจเกี่ยวกับอาหาร ดิฉันได้ฝึกทำและรักในการทำอาหารมาตั้งแต่เด็ก และดิฉันชอบเรียนในรายวิชาวิทยาศาสตร์ โดยเฉพาะวิชาเคมี พอโตขึ้นดิฉันจึงเลือกที่จะศึกษาต่อในสาขาวิชาวิทยาศาสตร์และเทคโนโลยีการอาหารเพราะว่าดิฉันคิดว่าอาหารและวิทยาศาสตร์สามารถไปด้วยกันได้ดี
+    </p>
+    <p style="text-indent: 2em; margin-bottom: 20px;">
+        ดิฉันได้ลองฝึกทำงานในด้านที่เกี่ยวกับอาหาร โดยช่วยธุรกิจของครอบครัวและทำพาร์ทไทม์ที่ร้านอาหาร และได้เข้าร่วมกิจกรรมค่าย KU Food science camp ทำให้ดิฉันรู้สึกได้ว่าดิฉันชอบและอยากศึกษาต่อเกี่ยวกับด้านวิทยาศาสตร์และเทคโนโลยีการอาหาร
+    </p>
+    <p style="text-indent: 2em; margin-bottom: 20px;">
+        ดิฉันมีความสนใจเกี่ยวกับอาชีพนักวิจัยอาหาร และดิฉันอยากมีผลิตภัณฑ์เกี่ยวกับอาหารเป็นของตัวเอง ดิฉันจึงเลือกที่จะศึกษาต่อในสาขานี้ เพื่อที่จะนำความรู้มาใช้ให้ดิฉันได้เป็นบุคคลที่มีประสิทธิภาพและมีผลิตผลิตภัณฑ์ของตนเองที่มีประสิทธิภาพ
+    </p>
+    <p style="text-indent: 2em;">
+        ดิฉันได้เข้าศึกษาคณะอุตสาหกรรมเกษตร สาขาวิชาวิทยาศาสตร์และเทคโนโลยีการอาหาร มหาวิทยาลัยเกษตรศาสตร์ เนื่องจากความเชื่อมั่นในชื่อเสียงและความเป็นเลิศทางวิชาการของสถาบันที่เป็นผู้นำด้านอุตสาหกรรมเกษตรของประเทศ ที่นี่เพียบพร้อมไปด้วยคณาจารย์ผู้เชี่ยวชาญ ห้องปฏิบัติการที่ทันสมัย และโรงงานต้นแบบ ที่เปิดโอกาสให้นิสิตได้ลงมือปฏิบัติจริง ดิฉันมั่นใจว่าสภาพแวดล้อมแห่งความรู้และหลักสูตรที่เข้มข้นของรั้วนนทรีแห่งนี้ จะหล่อหลอมให้ดิฉันเติบโตไปเป็นนักวิจัยอาหารหรือเจ้าของผลิตภัณฑ์เกี่ยวกับอาหารที่มีศักยภาพพร้อมขับเคลื่อนสังคมในอนาคต
+    </p>
+</div>
+
+    </div>
+</body>
+</html>
