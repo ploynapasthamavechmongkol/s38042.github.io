@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>กิจกรรมที่เกี่ยวกับคณะ - พลอยนภัส ธรรมเวชมงคล</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Prompt', sans-serif; }
+        body {
+            background-color: #fdfbf7;
+            color: #4a403a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(232, 195, 173, 0.15);
+            z-index: -1;
+            animation: float 10s ease-in-out infinite alternate;
+        }
+        .shape1 { width: 250px; height: 250px; top: 5%; left: 5%; }
+        .shape2 { width: 350px; height: 350px; bottom: 5%; right: 5%; animation-duration: 14s; background: rgba(181, 198, 184, 0.15); }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            100% { transform: translateY(-15px) rotate(5deg); }
+        }
+
+        .main-wrapper {
+            width: 100%;
+            max-width: 900px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(74, 64, 58, 0.06);
+            padding: 40px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.8s ease-out;
+            border: 1px solid #f2ece4;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1.page-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #3b302a;
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        h1.page-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #e8c3ad;
+            border-radius: 2px;
+        }
+
+        /* Navigation Bar inside content */
+        .nav-container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+        .nav-btn {
+            background-color: #fff;
+            color: #5c5048;
+            border: 1px solid #e2dad0;
+            padding: 8px 14px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+        .nav-btn:hover, .nav-btn.active {
+            background-color: #e8c3ad;
+            color: #fff;
+            border-color: #e8c3ad;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(232, 195, 173, 0.4);
+        }
+
+        /* Common content styles */
+        p, li {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #5c5048;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        /* Card styles */
+        .card {
+            background: #faf7f2;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid #f0e9df;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media(max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+
+        .img-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .img-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+        }
+        .img-box img:hover {
+            transform: scale(1.02);
+        }
+        
+        .badge {
+            display: inline-block;
+            background: #e8c3ad;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+
+    <div class="nav-container">
+        <a href="index.html" class="nav-btn ">หน้าแรก</a>
+<a href="profile.html" class="nav-btn ">ประวัติส่วนตัว</a>
+<a href="education.html" class="nav-btn ">ประวัติการศึกษา</a>
+<a href="sop.html" class="nav-btn ">Statement of Purpose</a>
+<a href="innovation.html" class="nav-btn ">โครงงานนวัตกรรม</a>
+<a href="activities.html" class="nav-btn active">กิจกรรมคณะ</a>
+<a href="volunteer.html" class="nav-btn ">จิตอาสา</a>
+<a href="leadership.html" class="nav-btn ">ความเป็นผู้นำ</a>
+<a href="certificate.html" class="nav-btn ">ใบประกาศนียบัตร</a>
+<a href="contact.html" class="nav-btn ">ช่องทางติดต่อ</a>
+
+    </div>
+
+    <div class="main-wrapper">
+        <h1 class="page-title">กิจกรรมที่เกี่ยวกับคณะ</h1>
+        
+<div class="card">
+    <h2 style="color: #3b302a; margin-bottom: 20px; font-size: 1.3rem;">• กิจกรรมที่เกี่ยวกับคณะ</h2>
+    
+    <div style="display: flex; flex-direction: column; gap: 30px;">
+        <div style="border-bottom: 1px solid #f0e9df; padding-bottom: 20px;">
+            <div class="grid-2">
+                <div class="img-box" style="margin:0;"><img src="lab.jpg" alt="Lab 1" onerror="this.src='https://via.placeholder.com/300x200?text=lab.jpg'"></div>
+                <div class="img-box" style="margin:0;"><img src="lab2.jpg" alt="Lab 2" onerror="this.src='https://via.placeholder.com/300x200?text=lab2.jpg'"></div>
+            </div>
+            <p style="text-align: center; margin-top: 12px; font-weight: 500;">เข้าร่วมกิจกรรมค่ายวิทยาศาสตร์ประยุกต์ KU Foodsci camp ครั้งที่ 4</p>
+        </div>
+
+        <div style="border-bottom: 1px solid #f0e9df; padding-bottom: 20px;">
+            <div class="img-box"><img src="S__24682515.jpg" alt="Chula Open House" style="max-width: 450px;" onerror="this.src='https://via.placeholder.com/450x300?text=Chula+Open+House'"></div>
+            <p style="text-align: center; margin-top: 10px; font-weight: 500;">เข้าร่วมกิจกรรม workshop คณะวิทยาศาสตร์ ภาควิชา เทคโนโลยีทางอาหาร ที่งาน Chula Open House 2026</p>
+        </div>
+
+        <div style="border-bottom: 1px solid #f0e9df; padding-bottom: 20px;">
+            <div class="img-box"><img src="S__24682524.jpg" alt="AI Series" style="max-width: 450px;" onerror="this.src='https://via.placeholder.com/450x300?text=AI+Series'"></div>
+            <p style="text-align: center; margin-top: 10px; font-weight: 500;">ได้รับคัดเลือกเข้าค่าย AI the Series ที่คณะอุตสาหกรรมเกษตร มหาวิทยาลัยเกษตรศาสตร์</p>
+        </div>
+
+        <div style="border-bottom: 1px solid #f0e9df; padding-bottom: 20px;">
+            <div class="img-box"><img src="kum.jpg" alt="KUMOOC" style="max-width: 450px;" onerror="this.src='https://via.placeholder.com/450x300?text=KUMOOC'"></div>
+            <p style="text-align: center; margin-top: 10px; font-weight: 500;">ได้ผ่านการ KUMOOC ครบถ้วนตามรายวิชาระบบการควบคุมคุณภาพและความปลอดภัยในอุตสาหกรรมอาหาร</p>
+        </div>
+
+        <div style="border-bottom: 1px solid #f0e9df; padding-bottom: 20px;">
+            <div class="img-box"><img src="S__24682530.jpg" alt="Dental Clinic" style="max-width: 450px;" onerror="this.src='https://via.placeholder.com/450x300?text=Dental+Clinic'"></div>
+            <p style="text-align: center; margin-top: 10px; font-weight: 500;">ฝึกประสบการณ์การทำงานที่คลินิกทันตกรรม</p>
+        </div>
+
+        <!-- New requested activities -->
+        <div style="border-bottom: 1px solid #f0e9df; padding-bottom: 20px;">
+            <div class="img-box"><img src="S__25460799.jpg" alt="Science Day" style="max-width: 450px;" onerror="this.src='https://via.placeholder.com/450x300?text=Science+Day'"></div>
+            <p style="text-align: center; margin-top: 10px; font-weight: 500;">จัดบูธงานวันวิทยาศาสตร์และเทคโนโลยีแห่งชาติ</p>
+        </div>
+
+        <div style="border-bottom: 1px solid #f0e9df; padding-bottom: 20px;">
+            <div class="img-box"><img src="S__25460801.jpg" alt="Tech Camp" style="max-width: 450px;" onerror="this.src='https://via.placeholder.com/450x300?text=Tech+Camp'"></div>
+            <p style="text-align: center; margin-top: 10px; font-weight: 500;">เข้าร่วมกิจกรรมค่ายยกระดับผลสัมฤทธิ์ทางการเรียนเทคโนโลยี</p>
+        </div>
+
+        <div style="border-bottom: 1px solid #f0e9df; padding-bottom: 20px;">
+            <div class="img-box"><img src="S__25460803.jpg" alt="Open House Food Sales" style="max-width: 450px;" onerror="this.src='https://via.placeholder.com/450x300?text=Open+House+Food+Sales'"></div>
+            <p style="text-align: center; margin-top: 10px; font-weight: 500;">เข้าร่วมกิจกรรมขายอาหารในงานวัน Open House ของโรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”</p>
+        </div>
+
+        <div>
+            <div class="grid-2">
+                <div class="img-box" style="margin:0;"><img src="S__25460837_0.jpg" alt="Lab Activity 1" onerror="this.src='https://via.placeholder.com/300x200?text=Lab+1'"></div>
+                <div class="img-box" style="margin:0;"><img src="S__25460838_0.jpg" alt="Lab Activity 2" onerror="this.src='https://via.placeholder.com/300x200?text=Lab+2'"></div>
+            </div>
+            <p style="text-align: center; margin-top: 12px; font-weight: 500;">เข้าร่วมการทำกิจกรรมแลปต่างๆ เพื่อนำไปต่อยอดในมหาวิทยาลัย</p>
+        </div>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>
